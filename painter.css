@@ -1,0 +1,88 @@
+.painter-section
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
+    width: fit-content;
+}
+
+.painter-section canvas
+{
+    cursor: crosshair;
+}
+
+.painter-canvas-section
+{
+    position: relative;
+}
+
+.painter-section .painter-tool-bar
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.painter-section .painter-tool-list
+{
+    display: flex;
+    flex-direction: row;
+    gap: .33em;
+}
+
+.painter-section canvas
+{
+    border: dashed #AAA 2px;
+}
+
+
+.painter-clickable
+{
+    content: '';
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 100%;
+    border: solid 1px #AAAAAAAA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+.painter-clickable:active,
+.painter-clickable.active
+{
+    scale: 1.25;
+}
+
+
+.painter-color-picker
+{
+    background: linear-gradient( to right,
+        #fb3434,
+        #ffdd00,
+        #3bec3e,
+        #6f73f9
+    );
+}
+
+.painter-color-picker input
+{
+    display: none;
+}
+
+
+
+
+.painter-invisible-text-input
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-100%, -100%);
+
+}
